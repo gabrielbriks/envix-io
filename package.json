@@ -1,7 +1,7 @@
 {
-  "name": "fastify-api",
+  "name": "Envix.io",
   "version": "1.0.0",
-  "description": "API Fastify - Modulo  2 Ignite",
+  "description": "API Envix.io para registros de transações fincanceiras pessoais - Modulo 2 Ignite",
   "main": "server.js",
   "scripts": {
     "lint": "eslint src --ext .ts --fix",
@@ -15,7 +15,8 @@
     "dotenv": "^16.0.3",
     "fastify": "^4.14.1",
     "knex": "^2.4.2",
-    "sqlite3": "^5.1.4"
+    "sqlite3": "^5.1.4",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
