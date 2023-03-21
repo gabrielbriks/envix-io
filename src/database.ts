@@ -3,7 +3,7 @@ import { Knex, knex as setupKnex } from 'knex'
 export const config: Knex.Config = {
   client: 'sqlite3',
   connection: {
-    filename: './tmp/app.db',
+    filename: './db/app.db',
   },
   useNullAsDefault: true,
   migrations: {
