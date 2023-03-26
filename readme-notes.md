@@ -37,3 +37,12 @@ modulo transações e etc.
 
 - Em seguida podemos fazer a importação desses arquivos dentro da aplicação.
 
+## Tipagens no Knex
+
+- Criamos um pasta chamada `@types`, no qual usamos para armazenar tipos que sobrescrevem outros tipos dentro da nossa aplicação, ou tipos globais que também podemos criar.
+
+- Nesse primeiro momento iremos definir uma tipagem para a nossa tabela `transactions`. Pois quando utilizamos "Query Builder" essas tipagens geralmente não são tratadas de forma automáticas;
+
+  - Criamos um arquivo chamado `knex.d.ts`. Basicamente essa extensão `d.ts`, quer sinaliza que esse arquivo é do tipo de *definição de tipos*. 
+  - Primeira coisa que devemos fazer ao sobrescrever ou definir um tipo para uma biblioteca, é importar a própria biblioteca em questão.
+  
