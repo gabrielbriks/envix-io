@@ -40,8 +40,6 @@ export async function transactionsRoutes(app: FastifyInstance) {
   app.get('/', { preHandler: [checkSessionIdExists] }, async request => {
     const { sessionId } = request.cookies
 
-    console.log('sessionId', sessionId)
-
     const transaction = await knex('transactions')
       .where('session_id', sessionId)
       .select('*')

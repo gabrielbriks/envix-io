@@ -50,3 +50,14 @@ modulo transações e etc.
 
 - Cookies de forma básica para o nosso cenário, são formas de conseguir manter o contexto entre as requisições
 - Estaremos utilizando ele para identificarmos qual usuário que cadastro cada transação. Pois até esse momento não temos um front-end ou controle de login para nos enviar essa informação.
+
+
+## Entendo testes automatizados
+
+- Testes unitários são testes que validam o comportamento de uma única unidade de código, como uma função ou método. Eles são úteis para garantir que cada parte da aplicação esteja funcionando corretamente, sem depender de outras partes.
+
+- Testes de integração são testes que validam a integração entre várias partes da aplicação, como a integração entre a camada de banco de dados e a camada de serviço. Eles são importantes para garantir que a aplicação esteja funcionando corretamente como um todo.
+
+- Testes e2e (end-to-end) são testes que validam o comportamento da aplicação como um todo, simulando a interação do usuário com a aplicação. Eles são importantes para garantir que a aplicação esteja funcionando corretamente em todos os níveis, desde a camada de interface até a camada de banco de dados.
+
+- A pirâmide de testes é uma estratégia que se baseia em ter mais testes unitários e menos testes de integração e e2e, pois testes unitários são mais rápidos e fáceis de escrever e manter do que outros tipos de testes.
