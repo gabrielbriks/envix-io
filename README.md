@@ -1,5 +1,5 @@
 # Envix.io API
-API base construída  em Node.js + Fastify, para registrar e gerenciar de transações de financias pessoais
+API base construída em Node.js + Fastify, para registrar transações de financias pessoais
 
 ## Description of requirements for the project
 

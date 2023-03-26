@@ -27,3 +27,13 @@ Vamos ter que utilizar uma marcação antes, sendo: ` -- `, em seguida escreva o
     ```bash
       npm run knex -- migrate:make nome-da-migration
     ```
+
+
+## Plugins do Fastify
+
+- Basicamente, nada mais é do que separar vários pedaços da nossa aplicação em vários arquivos.
+Um exemplo disso seria separar as rotas da aplicação em módulos, como por exemplos, modulo usuários,
+modulo transações e etc.
+
+- Em seguida podemos fazer a importação desses arquivos dentro da aplicação.
+
