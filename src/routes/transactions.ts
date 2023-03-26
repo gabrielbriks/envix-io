@@ -24,28 +24,22 @@ export async function transactionsRoutes(app: FastifyInstance) {
     return reply.status(201).send()
   })
 
-  app.get('/hello', async () => {
-    const tables = await knex('sqlite_schema').select('*')
-
-    return tables
-  })
-
-  app.get('/new', async () => {
-    const transaction = await knex('transactions')
-      .insert({
-        id: crypto.randomUUID(),
-        title: 'Transação de teste',
-        amount: 1000,
-      })
-      .returning('*') //Para retornar todas as informações que foram inseridas
-
-    return transaction
-  })
-
-  app.get('/list', async () => {
+  app.get('/', async () => {
     const transaction = await knex('transactions').select('*')
 
-    return transaction
+    return { transaction }
+  })
+
+  app.get('/:id', async request => {
+    const getTransactionParamsSchema = z.object({
+      id: z.string().uuid(),
+    })
+
+    const { id } = getTransactionParamsSchema.parse(request.params)
+
+    const transaction = await knex('transactions').where('id', id).first()
+
+    return { transaction }
   })
 
   app.get('/get/filter', async () => {
@@ -53,6 +47,6 @@ export async function transactionsRoutes(app: FastifyInstance) {
       .where('amount', 1000)
       .select('*')
 
-    return transaction
+    return { transaction }
   })
 }
