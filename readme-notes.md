@@ -46,3 +46,7 @@ modulo transações e etc.
   - Criamos um arquivo chamado `knex.d.ts`. Basicamente essa extensão `d.ts`, quer sinaliza que esse arquivo é do tipo de *definição de tipos*. 
   - Primeira coisa que devemos fazer ao sobrescrever ou definir um tipo para uma biblioteca, é importar a própria biblioteca em questão.
   
+## Utilização de Cookies
+
+- Cookies de forma básica para o nosso cenário, são formas de conseguir manter o contexto entre as requisições
+- Estaremos utilizando ele para identificarmos qual usuário que cadastro cada transação. Pois até esse momento não temos um front-end ou controle de login para nos enviar essa informação.
