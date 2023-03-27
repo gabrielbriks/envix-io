@@ -61,3 +61,19 @@ modulo transações e etc.
 - Testes e2e (end-to-end) são testes que validam o comportamento da aplicação como um todo, simulando a interação do usuário com a aplicação. Eles são importantes para garantir que a aplicação esteja funcionando corretamente em todos os níveis, desde a camada de interface até a camada de banco de dados.
 
 - A pirâmide de testes é uma estratégia que se baseia em ter mais testes unitários e menos testes de integração e e2e, pois testes unitários são mais rápidos e fáceis de escrever e manter do que outros tipos de testes.
+
+- Segundo a explicação do Diego, é indicado que boa parte das vezes, e principalmente para quem está aprendendo sobre, seja iniciado a construção dos testes pelo `E2E`. São testes que podem ser feitos independentes de arquitetura ou estrutura da aplicação, colocando uma barreira de entrada minima para implementa-los.
+
+### Implementação de Testes
+
+- Utilizaremos o *Vitest* para realizar os testes.
+
+
+#### Utilizando o Supertest
+
+- Estaremos utilizando o *Supertest* para conseguirmos realizar requisições durante os testes E2E, de forma que a aplicação fique no ar durante as requisições sem utilizarmos o "app.listen" em questão. Ou seja, ele sobe a aplicação de forma isolada.
+
+- E para que isso aconteça iremos reacoplar ou melhor dividir o `server.ts` em mais um arquivo chamado `app.ts`, de forma que no `server.ts` permaneça somente o método *listen*.
+  - Com essa estratégia, teremos a nossa aplicação disponível para utilizar nos testes sem estar subindo a aplicação em questão.
+
+
