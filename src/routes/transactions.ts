@@ -58,7 +58,7 @@ export async function transactionsRoutes(app: FastifyInstance) {
     const transaction = await knex('transactions')
       .where({
         id,
-        sessionId: sessionId,
+        session_id: sessionId,
       })
       .first()
 
