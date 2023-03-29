@@ -76,4 +76,18 @@ modulo transações e etc.
 - E para que isso aconteça iremos reacoplar ou melhor dividir o `server.ts` em mais um arquivo chamado `app.ts`, de forma que no `server.ts` permaneça somente o método *listen*.
   - Com essa estratégia, teremos a nossa aplicação disponível para utilizar nos testes sem estar subindo a aplicação em questão.
 
+### Compilação do Projeto e  Deploy
 
+#### Compilação
+
+- Para compilação do projeto, vamos utilizar o tsup
+
+```bash
+  npm i tsub -D
+```
+
+- Em seguida vamos adicionar o comando a seguir dentro do `package.json` para compilar todo o projeto.
+
+```json
+  "build": "tsup src"
+```
