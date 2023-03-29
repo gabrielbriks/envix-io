@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "API Envix.io para registros de transações fincanceiras pessoais - Modulo 2 Ignite",
   "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "lint": "eslint src --ext .ts --fix",
     "dev": "tsx watch src/server.ts",
@@ -18,6 +21,7 @@
     "dotenv": "^16.0.3",
     "fastify": "^4.14.1",
     "knex": "^2.4.2",
+    "pg": "^8.10.0",
     "sqlite3": "^5.1.4",
     "zod": "^3.21.4"
   },
