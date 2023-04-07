@@ -67,6 +67,7 @@ modulo transações e etc.
 ### Implementação de Testes
 
 - Utilizaremos o *Vitest* para realizar os testes.
+- Realizaremos somente teste E2E(End to End).
 
 
 #### Utilizando o Supertest
